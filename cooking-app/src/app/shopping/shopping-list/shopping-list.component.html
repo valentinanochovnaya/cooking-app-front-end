@@ -1,0 +1,21 @@
+<div class="container edit">
+  <div class="row">
+    <div class="col-md-6">
+      <app-shopping-list-edit></app-shopping-list-edit>
+      <simple-notifications></simple-notifications>
+    </div>
+    <div class="col-md-6 ingredients-list">
+      <ul class="list-group">
+        <a class="list-group-item"
+           type="button" data-bs-toggle="tooltip"
+           (click)="onEditIngredient(i)"
+           title="Click to edit or delete" data-bs-placement="top"
+           *ngFor="let ingredient of ingredients; let i = index">
+          {{ ingredient.name }} ({{ingredient.amount}})
+        </a>
+      </ul>
+    </div>
+  </div>
+</div>
+
+

@@ -1,0 +1,47 @@
+.ingredients-toggle {
+  background-color: transparent;
+  color: black;
+  border: none;
+}
+
+.card-img-top {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  object-position: center;
+}
+
+.manage-recipe-area {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.manage-recipe-button {
+  background-color: transparent;
+  color: #6D6875;
+  box-shadow:none !important;
+  border: none !important;
+}
+
+.show > .manage-recipe-button:focus {
+  box-shadow:none !important;
+  border: none !important;
+}
+
+.card-title {
+  color: #B5838D;
+}
+
+.card-text {
+  color: #c1aeb1;
+  padding: 10px 0;
+}
+
+a {
+  cursor: pointer;
+}
+
+.dropdown-item:active {
+  background-color: #B5838D;
+}
+

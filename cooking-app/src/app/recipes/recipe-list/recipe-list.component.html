@@ -1,0 +1,13 @@
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12 list-items">
+      <div class="row">
+        <div class="col-xs-12 add-recipe">
+          <button class="btn" style="background-color: #c9ada7; color:white" (click)="onAddRecipe()">Add a recipe</button>
+        </div>
+        <app-recipe-item *ngFor="let recipeItem of recipes; let i = index" [recipe]="recipeItem" [id]="i"></app-recipe-item>
+      </div>
+    </div>
+  </div>
+</div>
+

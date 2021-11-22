@@ -1,0 +1,27 @@
+<div class="container">
+  <div class="row">
+    <div class="col-sm-12 form list-group-item">
+      <div class="title-container">
+        <h3 class="card-title">Manage your shopping list!</h3>
+      </div>
+      <form [formGroup]="form" (ngSubmit)="onItemAdded()">
+        <div class="">
+          <label for="name" class="form-label">Name</label>
+          <input [spellcheck]="true" formControlName="name" type="text" id="name" class="form-control" placeholder="Enter a name of an ingredient">
+        </div>
+        <div class="col-sm-12">
+          <label for="amount" class="form-label">Amount</label>
+          <input formControlName="amount" type="number" class="form-control" id="amount">
+        </div>
+        <div class="row">
+          <div class="col-xs-12 group-btn">
+            <button *ngIf="!editMode" type="submit" class="btn add" [disabled]="!form.valid">Add</button>
+            <button *ngIf="editMode" type="button" class="btn add" (click)="updateItem()" [disabled]="!form.valid">Update</button>
+            <button type="button" class="btn delete" (click)="deleteItem()">Delete</button>
+            <button type="button" class="btn reset" (click)="clearForm()">Clear</button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

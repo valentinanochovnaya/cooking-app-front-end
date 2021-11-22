@@ -1,0 +1,23 @@
+h4:hover {
+  color: #4a4e69;
+}
+
+h4 {
+  color: black;
+  font-size: x-large;
+}
+
+.list-items {
+  padding: 0 25px;
+}
+.container {
+  display: flex;
+  flex-direction: column;
+}
+
+.add-recipe {
+  padding-bottom: 5px;
+}
+
+
+

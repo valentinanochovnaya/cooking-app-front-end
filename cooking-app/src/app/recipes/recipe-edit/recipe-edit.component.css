@@ -1,0 +1,57 @@
+.container {
+  box-sizing: border-box;
+  padding-top: 30px;
+}
+
+.image-container {
+  padding: 0;
+
+}
+.row {
+  padding-top: 10px;
+}
+
+.add {
+  color: white;
+  background-color: #c9ada7;
+}
+
+.reset {
+  background-color: #dee2e6;
+}
+
+.remove {
+  background-color: #f2e9e4;
+}
+
+.buttons-container {
+  display: flex;
+  justify-content: center;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.add, .reset {
+  width:150px;
+}
+
+.form-label {
+  font-weight: bold;
+  color: #B5838D;
+}
+
+img {
+  border-radius: 5px;
+}
+
+.btn-add-ingredient {
+  background-color: #FFCDB2;
+}
+
+
+
+
+
+
+
+

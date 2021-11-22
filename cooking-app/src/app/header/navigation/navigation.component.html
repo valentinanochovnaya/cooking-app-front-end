@@ -1,0 +1,27 @@
+<div class="navbar navbar-expand-lg navbar-dark" style="background-color: #9a8c98;">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#">Recipe Book</a>
+    </div>
+    <div class="collapse navbar-collapse">
+      <ul class="nav navbar-nav">
+        <li class="nav-item" routerLinkActive="active">
+          <a class="nav-link" routerLink="/recipes" >Recipes</a>
+        </li>
+        <li class="nav-item" routerLinkActive="active">
+          <a class="nav-link" routerLink="/shopping-list">Shopping list</a>
+        </li>
+      </ul>
+      <div class="dropdown ms-auto">
+        <a class="nav-link dropdown-toggle open" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false" style="color:white">
+          Manage
+        </a>
+
+        <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="dropdownMenuLink">
+          <li><a class="dropdown-item">Save data</a></li>
+          <li><a class="dropdown-item">Fetch data</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>

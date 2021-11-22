@@ -1,0 +1,79 @@
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12">
+      <form [formGroup]="form" class="list-group-item" (ngSubmit)="onSubmit()">
+        <div class="row">
+          <div class="col-xs-12">
+            <div class="form-group">
+              <label for="name" class="form-label">Name</label>
+              <input formControlName="name" type="text" id="name" class="form-control">
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-xs-12">
+            <div class="form-group">
+              <label for="description" class="form-label">Description</label>
+              <textarea formControlName="description" rows="3" type="text" id="description" class="form-control"></textarea>
+            </div>
+          </div>
+        </div>
+        <div class="image-container">
+          <div class="row">
+            <div class="col">
+              <label for="imgPath" class="form-label">Image Path</label>
+              <textarea formControlName="imgPath" rows=3 type="text" id="imgPath" class="form-control"></textarea>
+            </div>
+            <div class="col">
+              <img src="{{ form.get('imgPath')?.value }}" alt="" class="img-fluid">
+            </div>
+          </div>
+        </div>
+        <div class="ingredient-container">
+          <div class="row">
+            <div class="col-xs-12" formArrayName="ingredients">
+              <div class="row"
+                   *ngFor="let ingredientCtrl of controls; let i = index"
+                   [formGroupName]="i">
+                <div class="col-7 ingredient-input">
+                  <input formControlName="name"  type="text" class="form-control ">
+                </div>
+                <div class="col ingredient-number-input">
+                  <input formControlName="amount" type="number" class="form-control">
+                </div>
+                <div class="col-md-auto cancel-ingredient">
+                  <button
+                    (click)="removeIngredient(i)"
+                    type="button" class="btn remove"><i class="fa fa-minus"></i></button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="button-add-ingredient-container">
+          <div class="row">
+            <div class="col">
+              <button (click)="onFieldForIngredientAdd()" type="button" class="btn btn-add-ingredient" data-bs-toggle="tooltip"
+                      title="Click to add a new ingredient" data-bs-placement="top"><i class="fa fa-plus"></i></button>
+            </div>
+          </div>
+        </div>
+        <div class="buttons-container">
+          <div class="row">
+              <div class="col">
+                <button *ngIf="!editMode" type="submit" class="btn add"
+                        [disabled]="!form.valid"
+                        (click)="onSuccess('Recipe is successfully added!')">Add</button>
+                <button *ngIf="editMode" type="submit"
+                        class="btn add" [disabled]="!form.valid"
+                        (click)="onSuccess('Recipe is successfully edited!')">Save</button>
+              </div>
+              <div class="col">
+                <button type="button" class="btn reset" (click)="cancel()">Cancel</button>
+              </div>
+            </div>
+          </div>
+      </form>
+    </div>
+  </div>
+</div>

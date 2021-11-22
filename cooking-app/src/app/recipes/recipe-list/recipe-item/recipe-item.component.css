@@ -1,0 +1,40 @@
+.container {
+  display: flex;
+  padding-top: 1rem;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.list-group-item-heading {
+  color: #B5838D;
+}
+
+.list-group-item-text {
+  color: #c1aeb1;
+}
+
+.list-group-item {
+  cursor: url(c.svg), pointer;
+}
+
+.active {
+  background-color: transparent;
+  border: 1px solid #c1aeb1;
+}
+
+/*.img-wrapper {*/
+/*  overflow: hidden;*/
+/*}*/
+
+/*.image {*/
+/*  transition: all 2s ease;*/
+/*}*/
+
+/*.image:hover {*/
+/*  transition: all 1s ease;*/
+/*  transform: scale(1.1);*/
+/*}*/
+

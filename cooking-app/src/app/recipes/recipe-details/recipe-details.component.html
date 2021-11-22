@@ -1,0 +1,51 @@
+<div class="row">
+  <div class="col-xs-12 manage-recipe-area">
+    <div class="dropdown">
+      <a class="btn dropdown-toggle manage-recipe-button" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
+        Manage Recipe
+      </a>
+
+      <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+        <li><a class="dropdown-item" (click)="onAddToShoppingList()">To Shopping list</a></li>
+        <li><a class="dropdown-item" (click)="onEditRecipe()">Edit Recipe</a></li>
+        <li><a class="dropdown-item" (click)="onDeleteRecipe()">Delete Recipe</a></li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<div class="card">
+    <div class="row">
+      <div class="col-xs-12">
+        <img src="{{recipe.imagePath}}" alt="" class="card-img-top img-fluid">
+      </div>
+    </div>
+    <div class="card-body">
+      <div class="row">
+        <div class="col-xs-12">
+          <h1 class="card-title">{{recipe.title}}</h1>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xs-12">
+          <p class="card-text">{{recipe.description}}</p>
+        </div>
+      </div>
+      <div class="card ingredients">
+        <div class="card-header">
+          Ingredients
+        </div>
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item" *ngFor="let ingredient of recipe.ingredients">{{ ingredient.name }}</li>
+        </ul>
+      </div>
+    </div>
+</div>
+
+
+<!--<div *ngFor="let ingredient of recipe.ingredients" class="ingredients">-->
+<!--  <div class="form-check">-->
+<!--    <input class="form-check-input" id="flexCheckDefault" type="checkbox" name="checkbox-list"/>-->
+<!--    <label class="form-check-label" for="flexCheckDefault">{{ingredient.name}}</label>-->
+<!--  </div>-->
+<!--</div>-->
